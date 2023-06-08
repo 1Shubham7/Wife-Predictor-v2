@@ -1,0 +1,31 @@
+/* Styles for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .superClass {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+    .circular-image {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  /* Styles for screens larger than 768px */
+  @media only screen and (min-width: 769px) {
+    .superClass {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .circular-image {
+      margin-right: 20px;
+      margin-left: 30px;
+    }
+  }
+  
