@@ -1,0 +1,195 @@
+.logo{
+    position: relative;
+}
+
+.logo::before{
+    content:'';
+    position: absolute;
+}
+
+.mainnav ul{
+    display: flex;
+    justify-content: center;
+  }
+
+.mainnav ul li{
+    margin: 0 24px;
+    margin-top:-150px;
+      list-style: none;
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 25px;
+      color: green;
+} 
+
+.curve {
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+  }
+
+.curve::before{
+    content:'';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: blue;
+    transform: translate(85%,60%);
+}
+
+.curve::after{
+    content:'';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: red;    
+    transform: translate(-4%,40%);
+    z-index:1;
+}
+
+.custom-shape-divider-top-1683378542 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.spacer{
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.layer1{
+    background-image: url('../../public/NavlayerOne.svg');
+}
+
+.flip{
+    transform: rotate(180deg);
+}
+
+.navlayer{
+    background-image: url('../../public/NavlayerOne.svg');
+}
+
+.news:hover::after{
+    /* transform: scale(1.1); */
+    transition: 400ms;
+    width: 100%;
+}
+  
+.news::after{
+    content:'';
+    display:block;
+    height: 4px;
+    width:0;
+    background:green;
+    transition:all .5
+}
+
+.news:hover{
+    transform: scale(1.2);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#wifeplay{
+    scroll-margin-top: 100px;
+}
+
+.letsgo:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
+    color: yellow;
+
+    /* width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px; */
+    
+}
+
+.mycheckbox{
+    transform: scale(2);
+}
+
+.mycheckbox:hover{
+    transform: scale(2.7);
+    transition: 0.2s;
+}
+
+.enternamebar{
+    transform: scale(2);
+}
+
+.name:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.ready{
+    
+        animation: colorchange 1.5s infinite;
+      }
+      
+      @keyframes colorchange {
+        0% {
+          color: green;
+        }
+        25% {
+            color: white;
+          }
+          50% {
+            color: green;
+          }
+          75% {
+            color: white;
+          }
+        100% {
+            color: green;
+          }
+      }
+      
+.navclass{
+    
+    
+    animation: colorchange 1.5s infinite;
+    
+}
+
+@keyframes colorchange {
+  0% {
+    color: green;
+  }
+  25% {
+      color: white;
+    }
+    50% {
+      color: green;
+    }
+    75% {
+      color: white;
+    }
+  100% {
+      color: green;
+    }
+
+}
