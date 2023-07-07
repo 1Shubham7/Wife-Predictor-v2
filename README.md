@@ -16,6 +16,7 @@ This app is made with React, JavaScript, HTML, and CSS. We also plan to add the 
 
 ## **Local Setup**
 You can set up the app locally by following the instructions below.
+
 ### **Prerequisites**
 - You must have Node.js and NPM installed.
 
@@ -34,7 +35,6 @@ You will now have the website running locally on your machine.
 If you would like to contribute to the project, add your images to the database (located in `Wife-Predictor-v2/src/components/Confirm.js`), and then submit a pull request with a clear description of the changes you made. Please be cautious and follow the image contribution guidelines below.
 
 ### **Guidelines**
-
 - Images must not contain pornographic content.
 - Images must not contain people under 18 years of age.
 - Images must not contain people who are uncomfortable having their images shared.
