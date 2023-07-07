@@ -372,7 +372,7 @@ function ConfirmationCheckbox() {
             options={{ text: "Just found out my future wife. You want to find yours too ? go checkout", via: '1shubham7' }}
             />
             <TwitterFollowButton
-    screenName={'Shubham'}
+    screenName={'1Shubham7'}
   />
             </div>
               
