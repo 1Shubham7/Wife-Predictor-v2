@@ -43,11 +43,11 @@ export default function About() {
       <section style={wifestyle2} >
         <h1 style={{textDecoration:'underline'}}>About Me</h1>
         <p>  This is Shubham Singh Mahar, I am First Year Undergrad persuing Bachelors in Technology with Computer Science Eng. major from a tier-3 college in Ghaziabad.
-        I belong to Haldwani, Nanital, Uttarakhand.
-        This Website is made using React 18.
-        The code is available in this github reposetory: <a href="https://github.com/1Shubham7/Wife-Predictor">Wife-Predictor</a></p>
+        I am from Haldwani, Nanital, Uttarakhand.
+        The code is available in this github reposetory <a href="https://github.com/1Shubham7/Wife-Predictor">Wife-Predictor</a>. 
+         Staring the repo on GitHub would be really helpful!</p>
+        <p>Do checkout my blog <a href="https://1shubham7.hashnode.dev/">1Shubham7</a></p>
       </section>
-    
     </div>
     </div>
     
