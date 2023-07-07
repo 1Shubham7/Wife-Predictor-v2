@@ -37,9 +37,14 @@ const refreshAboutPage = ()=>{
         <ul>
           
             
-        <a  href={window.location.pathname==='/wife-predictor/about'? '/wife-predictor' : '#wifeplay'} style={{color:'green'}}>
+        {/* <a  href={window.location.pathname==='/wife-predictor/about'? '/wife-predictor' : '#wifeplay'} style={{color:'green'}}>
+        <li className="navclass news " id="navbarid" onClick={window.location.pathname==='/wife-predictor/about'?refreshAboutPage:null}>{window.location.pathname==='/wife-predictor' ? 'Play' : 'Home'}</li>
+      </a> */}
+
+<a  href={window.location.pathname==='/wife-predictor/about'? '/wife-predictor' : '#wifeplay'} style={{color:'green'}}>
         <li className="navclass news " id="navbarid" onClick={window.location.pathname==='/wife-predictor/about'?refreshAboutPage:null}>{window.location.pathname==='/wife-predictor' ? 'Play' : 'Home'}</li>
       </a>
+
           <a href="https://github.com/1Shubham7" target="_blank" rel="noreferrer"><li  className="news">GitHub</li></a>
           <a href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/" target="_blank" rel="noreferrer" ><li  className="news">LinkedIn</li></a>
           <Link to="/wife-predictor/about" onClick={refreshAboutPage}><li  className="news">About</li></Link>
@@ -49,20 +54,20 @@ const refreshAboutPage = ()=>{
       
 
       <Routes>
-  <Route path="/wife-predictor/about" element={<About />} />
-  {/* other routes here */}
-
-    <Route path='/wife-predictor' element={<>
-    <Wife></Wife>
-      <Confirm></Confirm>
-      <HowCanYouHelp></HowCanYouHelp>
+  <Route path="/about" element={<About />} />
+    <Route path='/' element={<>
+    <Wife />
+      <Confirm />
+      <HowCanYouHelp />
       </>} />
 
 </Routes>
       
-    
-      
-      <Footer></Footer>
+{/*     
+      <Wife />
+      <Confirm />
+      <HowCanYouHelp />
+      <Footer></Footer> */}
       
       </Router>
     </div>
