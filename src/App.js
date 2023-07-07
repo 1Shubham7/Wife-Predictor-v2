@@ -62,12 +62,7 @@ const refreshAboutPage = ()=>{
       </>} />
 
 </Routes>
-      
-{/*     
-      <Wife />
-      <Confirm />
-      <HowCanYouHelp />
-      <Footer></Footer> */}
+      <Footer />
       
       </Router>
     </div>
