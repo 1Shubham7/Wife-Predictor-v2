@@ -11,7 +11,7 @@ This app was created as a fun way for users to predict their future partner base
 This app is made with React, HTML, and CSS. We also plan to add the Django REST framework as the backend in the future. Within these frameworks, we use various libraries and tools such as Bootstrap, React Router.
 <hr>
 
-## Contibute
+## Contribute
 The easiest way to contribute to the project is to give it a star. That would help me a lot!! 
 
 ## Preview
