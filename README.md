@@ -19,25 +19,30 @@ The easiest way to contribute to the project is to give it a star. That would he
 
 ## Setting up locally
 
-### prerequisites
+### Step 0
+Make sure you have [NodeJS](nodejs.org) installed on your device
 
-1. You must have the npm package manager downloaded in your desktop
+### Step 1
+Clone the repository using:
 
-You can set up the app locally by following these basic steps :
+```
+git clone https://github.com/1Shubham7/Wife-Predictor-v2
+```
+### Step 2
+In your local directory of the project, install the node dependencies using:
 
-##### Step 1 : 
+```
+npm install
+```
 
-fork the project
+### Step 3
+Run the project in your local browser using:
 
-##### Step 2 :
+```
+npm start
+```
 
-download the fork locally
-
-##### Step 3 :
-
-go inside the wife-predictor folder in the terminal and run " npm start "
-
-You will now have the website running locally in your desktop.
+--- 
 
 ### If you would like to contribute to the project, please follow these steps:
 
