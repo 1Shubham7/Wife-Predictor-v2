@@ -15,7 +15,7 @@ This app is made with React, HTML, and CSS. We also plan to add the Django REST 
 The easiest way to contribute to the project is to give it a star. That would help me a lot!! 
 
 ## Preview
-add preview here
+![Preview image](assets/image.png)
 
 ## Setting up locally
 
