@@ -30,9 +30,6 @@ export default function About() {
           border: "5px solid green",
           boxSizing: "border-box",
           animation: "border-pulse 2s infinite"
-          
-          
-          
         }}
         alt="Shubham Singh"
       />
