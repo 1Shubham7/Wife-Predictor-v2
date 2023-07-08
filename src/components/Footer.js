@@ -47,20 +47,20 @@ export default function Footer() {
           <p>Thank you for your time.</p>
           <p></p>
           <p>
-            You can find the code base here:{" "}
+            You can find the codebase here:{" "}
             <a href="https://github.com/1Shubham7/Wife-Predictor-v2">
               GitHub/1shubham7/wife-predictor-v2
             </a>
           </p>
           <p>
-            Disclaimer: The website is made just for fun with no intend to hurt
-            anyone. There is no intention to predict anything
+            Disclaimer: The website is made just for fun with no intent to hurt
+            anyone. There is no real or genuine intention to predict anything.
           </p>
           <p>
-            Images in this website have been randomly taken from the internet.
-            If you are one of those and feel offended by the picturization,
-            contact me at <a href="shubhammahar1306@gmail.com">Shubham</a> I
-            will remove your picture.
+            Images on this website have been randomly taken from the internet.
+            If you're included in one of the images and feel offended,
+            contact me at <a href="shubhammahar1306@gmail.com">Shubham</a> and I
+            will remove it.
           </p>
         </div>
       </div>
