@@ -11,7 +11,7 @@ function ConfirmationCheckbox() {
       address: "India",
       age: 31,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7XWU-7O8iRt95I6C6eg9WLiqqrpKhVTw_6g&usqp=CAU",
-      description: "I love you Janu, Come to Bihar, Let's make kids together",
+      description: "I love you, Janu. Come to Bihar, let's make kids together!",
     },
     2: {
       id: 2,
@@ -410,7 +410,7 @@ function ConfirmationCheckbox() {
         >
           <div className="form-group container">
             <label htmlFor="exampleInputEmail1">
-              <h4>What's your name</h4>
+              <h4>What's your name?</h4>
             </label>
             <br />
             <div className="name">
@@ -427,12 +427,12 @@ function ConfirmationCheckbox() {
                 className="form-control"
                 id="nameid"
                 aria-describedby="emailHelp"
-                placeholder="Enter your Name"
+                placeholder="Enter Your Name"
               />
             </div>
           </div>
           <input className="mycheckbox" type="checkbox" onChange={checkboxon} />
-          &nbsp; Whatever Wife I get I will accept her for rest of my life
+          &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
             disabled={!isActive}
@@ -441,7 +441,7 @@ function ConfirmationCheckbox() {
             type="button"
             className="btn letsgo btn-success "
           >
-            Let's go
+            Wife Me Up
           </button>
         </div>
       )}
@@ -452,8 +452,8 @@ function ConfirmationCheckbox() {
             Ready!
           </h1>
           <p style={{ color: "green" }}>
-            I {inputValue}, have agreed to marry the women about to come as my
-            future wife. Backing away from it would mean that I am not a man.
+            I, {inputValue}, agree to marry the woman who is about to appear as my
+            future wife. Backing away from this promise would mean that I am not a man.
           </p>
           <div
             href="#"
@@ -530,7 +530,7 @@ function ConfirmationCheckbox() {
                     border: "1px solid #386641",
                   }}
                 >
-                  Age : {person.age}
+                  Age: {person.age}
                 </li>
               </ul>
             </div>
@@ -538,14 +538,14 @@ function ConfirmationCheckbox() {
 
           <div className="my-3">
             <p style={{ color: "green", textDecoration: "underline 3px" }}>
-              <b>Share on twitter</b>
+              <b>Share on Twitter</b>
             </p>
 
             <div class="mid-col-6">
               <TwitterShareButton
                 url={"wife-predictor.netlify.app"}
                 options={{
-                  text: "Just found out my future wife. You want to find yours too ? go checkout",
+                  text: "Just found out who my future wife is. Want to find yours, too? Go here:",
                   via: "1shubham7",
                 }}
               />
