@@ -57,7 +57,7 @@ Submit a pull request with a clear description of the changes you made
 
 ##### 1. Images must not include pornographic content.
 ##### 2. Images must not have underage girls or girls who are not comfortable sharing their photographs.
-##### 3. While It's OK to have funny Images but it should not be demining to the person. 
+##### 3. While it's OK to have funny images, it should not be demeaning to the person. 
 ##### 4. Images should be of decent quality and resolution.
 ##### 5. Images should not be copyrighted or otherwise infringe on intellectual property rights.
 
