@@ -48,18 +48,7 @@ npm start
 --- 
 
 ## Contributing
-If you would like to contribute to the project, please follow these steps:
-
-Add your images to the database
-Submit a pull request with a clear description of the changes you made
-
-### Guidelines for Contributing
-
-##### 1. Images must not include pornographic content.
-##### 2. Images must not have underage girls or girls who are not comfortable sharing their photographs.
-##### 3. While it's OK to have funny images, it should not be demeaning to the person. 
-##### 4. Images should be of decent quality and resolution.
-##### 5. Images should not be copyrighted or otherwise infringe on intellectual property rights.
+If you would like to contribute to this project, please read the [Contribution guidelines](CONTRIBUTING.md) and make sure to follow the [Code Of Conduct](CODE_OF_CONDUCT.md).
 
 ## Feedback and Support
 If you encounter any issues with the Future Wife Predictor App or have any feedback or suggestions, please open an issue in the Issues section of this repository. We appreciate your feedback and will respond as soon as possible.
