@@ -31,7 +31,7 @@ function ConfirmationCheckbox() {
   }
 
   function generatorRandomNumber() {
-    return Math.floor(Math.random() * 40);
+    return Math.floor(Math.random() * wives.length);
   }
 
   const [inputValue, setInputValue] = useState("");
@@ -210,7 +210,7 @@ function ConfirmationCheckbox() {
               <b>Share on Twitter</b>
             </p>
 
-            <div class="mid-col-6">
+            <div className="mid-col-6">
               <TwitterShareButton
                 url={"wife-predictor.netlify.app"}
                 options={{
