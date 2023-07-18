@@ -19,15 +19,11 @@ function ConfirmationCheckbox() {
   const [buttonPlayed, setButtonPlayed] = useState(false);
 
   function handleClick() {
-    if (isChecked === false) {
-      setIsChecked(true);
-    } else {
-      setIsChecked(false);
-    }
+    setIsChecked(oldIsChecked => !oldIsChecked);
   }
 
   function checkboxon() {
-    setIsActive(!isActive);
+    setIsActive(oldIsActive => !oldIsActive);
   }
 
   function generatorRandomNumber() {
@@ -41,13 +37,8 @@ function ConfirmationCheckbox() {
   }
 
   const playGame = () => {
-    if (buttonPlayed === true) {
-      setButtonPlayed(false);
-    } else {
-      setButtonPlayed(true);
-    }
+    setButtonPlayed(oldButtonPlayed => !oldButtonPlayed);
     const randomNum = generatorRandomNumber();
-    console.log(randomNum);
     setPerson(wives[randomNum]);
   };
 
@@ -61,7 +52,6 @@ function ConfirmationCheckbox() {
     alignItems: "center",
     padding: "200px 20vw",
     minHeight: "200px",
-    // fontFamily:
   };
 
   return (
