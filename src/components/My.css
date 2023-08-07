@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .logo{
     position: relative;
 }
@@ -95,16 +100,20 @@
     background:green;
     transition:all .5
 }
-
+.news{
+  transition: transform 300ms ease;
+}
 .news:hover{
-    transform: scale(1.2);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-decoration: none;
+  transform: translateY(-10px);
 }
 
 html{
     scroll-behavior: smooth;
 }
-
+.link:hover{
+  text-decoration: none;
+}
 #wifeplay{
     scroll-margin-top: 100px;
 }
@@ -193,3 +202,15 @@ html{
     }
 
 }
+.main-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 15em;
+}
+
+.main-text p {
+  text-align: center;
+  font-size: 55px; 
+  font-weight: bold;
+}
+
