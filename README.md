@@ -2,16 +2,23 @@
 
 The Future Wife Predictor App is a fun app that predicts a user's future wife based on a database of images of women. The app is designed to be easy to use and enjoyable for users of all ages.
 
+<p align="center">
+<a href="#">
+    <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="SPONSOR">
+  </a>  
+</p>
+
 ## About
 
 This app was created as a fun way for users to predict their future partner based on a database of images of women. The goal of the project is to create a diverse and inclusive database that accurately represents the many different types of people that exist in the world.
 
 ## Technology Used
-
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+<p align="center">
+   <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
+</p>
 
 We plan to add Django REST framework as the backend in the future.
 
@@ -22,23 +29,25 @@ We plan to add Django REST framework as the backend in the future.
 
 ## Setting up locally
 
-### Step 0
-Make sure you have [NodeJS](nodejs.org) installed on your device
-
 ### Step 1
+Make sure you have NodeJS installed on your device.
+
+<a href = "https://nodejs.org/en" align = "center"><img src = "https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /></a>
+
+### Step 2
 Clone the repository using:
 
 ```
 git clone https://github.com/1Shubham7/Wife-Predictor-v2
 ```
-### Step 2
+### Step 3
 In your local directory of the project, install the node dependencies using:
 
 ```
 npm install
 ```
 
-### Step 3
+### Step 4
 Run the project in your local browser using:
 
 ```
