@@ -45,20 +45,20 @@ function App() {
               <li className="news">GitHub</li>
             </a>
             <a
-              href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/"
+              href="https://www.linkedin.com/in/1shubham7/"
               target="_blank"
               rel="noreferrer"
             >
               <li className="news">LinkedIn</li>
             </a>
-            <Link to="/about" onClick={refreshAboutPage}>
+            <Link to="/About" onClick={refreshAboutPage}>
               <li className="news">About</li>
             </Link>
           </ul>
         </nav>
 
         <Routes>
-          <Route path="/about" element={<About />} />
+          <Route path="/About" element={<About />} />
           <Route
             path="/"
             element={
