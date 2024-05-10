@@ -3,8 +3,8 @@
 The Future Wife Predictor App is a fun app that predicts a user's future wife based on a database of images of women. The app is designed to be easy to use and enjoyable for users of all ages.
 
 <p align="center">
-<a href="#">
-    <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="SPONSOR">
+<a href="https://github.com/1Shubham7">
+    <img src="https://img.shields.io/badge/Owner-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="OWNER">
   </a>  
 </p>
 
@@ -58,6 +58,7 @@ npm start
 
 ## Contributing
 If you would like to contribute to this project, please read the [Contribution guidelines](CONTRIBUTING.md) and make sure to follow the [Code Of Conduct](CODE_OF_CONDUCT.md).
+
 
 ## Feedback and Support
 If you encounter any issues with the Future Wife Predictor App or have any feedback or suggestions, please open an issue in the Issues section of this repository. We appreciate your feedback and will respond as soon as possible.
