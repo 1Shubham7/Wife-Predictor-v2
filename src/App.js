@@ -17,7 +17,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div className="spacer layer1"></div>
+
+        <div className="spacer layer1">
+          <div className="main-text">
+            <p><span class="magic"><span class="magic-text">Wife Predictor</span></span></p>
+          </div>
+        </div>
         <nav className="mainnav">
           <ul>
             <a
@@ -41,6 +46,7 @@ function App() {
               href="https://github.com/1Shubham7"
               target="_blank"
               rel="noreferrer"
+              className="link"
             >
               <li className="news">GitHub</li>
             </a>
@@ -48,10 +54,11 @@ function App() {
               href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/"
               target="_blank"
               rel="noreferrer"
+              className="link"
             >
               <li className="news">LinkedIn</li>
             </a>
-            <Link to="/about" onClick={refreshAboutPage}>
+            <Link to="/about" className="link" onClick={refreshAboutPage}>
               <li className="news">About</li>
             </Link>
           </ul>
