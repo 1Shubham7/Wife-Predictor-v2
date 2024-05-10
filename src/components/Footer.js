@@ -8,7 +8,7 @@ export default function Footer() {
           background: "black",
           color: "white",
           paddingBottom: "20px",
-          border: "2px solid white",
+          border: "2px",
         }}
       >
         <div className="container">
@@ -16,7 +16,8 @@ export default function Footer() {
           <p className="text-center my-1" style={{ color: "white" }}>
             <a
               className="mx-2"
-              href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/"
+              href="https://www.linkedin.com/in/1shubham7/"
+              target="_blank"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +31,7 @@ export default function Footer() {
               </svg>
             </a>
             Shubham Singh
-            <a className="mx-2" href="https://github.com/1Shubham7">
+            <a className="mx-2" href="https://github.com/1Shubham7" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -52,7 +53,7 @@ export default function Footer() {
               GitHub/1shubham7/wife-predictor-v2
             </a>
           </p>
-          <p>
+          <p style={{color:"red"}}>
             Disclaimer: The website is made just for fun with no intent to hurt
             anyone. There is no real or genuine intention to predict anything.
           </p>

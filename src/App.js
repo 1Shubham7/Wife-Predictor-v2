@@ -45,7 +45,7 @@ function App() {
               <li className="news">GitHub</li>
             </a>
             <a
-              href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/"
+              href="https://www.linkedin.com/in/1shubham7/"
               target="_blank"
               rel="noreferrer"
             >
