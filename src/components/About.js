@@ -1,57 +1,41 @@
-import React from 'react'
-import './photo.css'
+import "./App.css";
+import Wife from "./components/Wife";
+import Footer from "./components/Footer";
+import Confirm from "./components/Confirm";
+import HowCanYouHelp from "./components/HowCanYouHelp";
+import Navbar from "./components/Navbar";
+import "./components/My.css";
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import About from "./components/About";
 
-export default function About() {
-  const wifestyle2 = {
-    margin: '0',
-    background: 'yellow',
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: "100px 20vw",
-    minHeight: '200px',
-    color: 'green'
-    // fontFamily:
-  }
+function App() {
+
 
   return (
-    <>
-      <div className="superClass" style={{ backgroundColor: 'yellow', color: 'green', paddingTop: '40px', paddingBottom: '40px' }}>
-
-        <div className="circular-image" >
-          <img
-            src="CVmin.jpg"
-            style={{
-              width: "300px",
-              height: "300px",
-              borderRadius: "50%",
-              overflow: "hidden",
-              border: "5px solid green",
-              boxSizing: "border-box",
-              animation: "border-pulse 2s infinite"
-
-
-
-            }}
-            alt="Shubham Singh"
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/about" element={<>
+          <Navbar/>
+          <About/>
+          </>} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar/>
+                <Wife />
+                <Confirm />
+                <HowCanYouHelp />
+              </>
+            }
           />
-
-        </div >
-        <div className="text" style={{ textAlign: 'center', justifyContent: 'center' }}>
-
-          <section style={wifestyle2} >
-            <h1 style={{ textDecoration: 'underline' }}>About Me</h1>
-            <p>This is Shubham Singh Mahar. I am a First Year Undergrad pursuing
-              Bachelors in Technology with Computer Science Eng. major from a tier-3 college in Ghaziabad.
-              I am from Haldwani, Nanital, Uttarakhand.
-              The code for this project is available in the GitHub repository <a href="https://github.com/1Shubham7/Wife-Predictor">Wife-Predictor</a>.
-              Starring the repository on GitHub would be really helpful!</p>
-            <p>Do check out my blog <a href="https://1shubham7.hashnode.dev/">1Shubham7</a>.</p>
-          </section>
-        </div>
-      </div>
-
-    </>
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
+
+export default App;
