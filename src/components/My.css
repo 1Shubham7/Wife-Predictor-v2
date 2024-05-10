@@ -192,6 +192,8 @@ html{
 
 @media only screen and (max-width: 769px) {
   .navbar ul{
+    margin-top: 10%;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
