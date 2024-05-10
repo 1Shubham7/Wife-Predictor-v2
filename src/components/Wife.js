@@ -5,7 +5,7 @@ export default function Wife() {
   const wifestyle = {
     margin: '0',
     color: 'white',
-    background: 'green',
+    background: 'linear-gradient(to right,green,blue)',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
