@@ -29,6 +29,9 @@ We plan to add Django REST framework as the backend in the future.
 
 ## Setting up locally
 
+### Step 0
+Make sure you have [NodeJS](https://nodejs.org/en/download) installed on your device
+
 ### Step 1
 Make sure you have NodeJS installed on your device.
 
