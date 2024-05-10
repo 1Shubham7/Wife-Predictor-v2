@@ -6,7 +6,7 @@ export default function HowCanYouHelp() {
   const wifestyle2 = {
     margin: '0',
     color: 'white',
-    background: 'green',
+    background: 'linear-gradient(to right,green,blue)',
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
