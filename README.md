@@ -20,7 +20,7 @@ This app was created as a fun way for users to predict their future partner base
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
 </p>
 
-We plan to add Django REST framework as the backend in the future.
+We plan to add the Django REST framework as the backend in the future.
 
 <hr>
 
@@ -30,25 +30,25 @@ We plan to add Django REST framework as the backend in the future.
 ## Setting up locally
 
 ### Step 1
-Make sure you have NodeJS installed on your device.
+Please make sure you have NodeJS installed on your device.
 
 <a href = "https://nodejs.org/en" align = "center"><img src = "https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /></a>
 
 ### Step 2
-Clone the repository using:
+Clone the repository using :
 
 ```
 git clone https://github.com/1Shubham7/Wife-Predictor-v2
 ```
 ### Step 3
-In your local directory of the project, install the node dependencies using:
+In your local directory of the project, install the node dependencies using :
 
 ```
 npm install
 ```
 
 ### Step 4
-Run the project in your local browser using:
+Run the project in your local browser using : 
 
 ```
 npm start
