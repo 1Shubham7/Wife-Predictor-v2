@@ -95,10 +95,11 @@ function ConfirmationCheckbox() {
           <p></p>
           <button
             disabled={!isActive}
-            style={buttonStyle}
+            //style={buttonStyle}
             onClick={handleClick}
             type="button"
             className="btn letsgo btn-success "
+            id="button"
           >
             Wife Me Up
           </button>
