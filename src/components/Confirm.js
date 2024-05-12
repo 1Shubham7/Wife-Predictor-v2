@@ -13,7 +13,6 @@ function ConfirmationCheckbox() {
   };
 
   const [person, setPerson] = useState(null);
-
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
@@ -79,7 +78,8 @@ function ConfirmationCheckbox() {
                 type="email"
                 style={{
                   textAlign: "center",
-                  width: "350px",
+                  width: "100%", 
+                  maxWidth: "375px",
                   height: "40px",
                   margin: "0 auto",
                 }}
