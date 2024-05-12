@@ -13,17 +13,15 @@ function ConfirmationCheckbox() {
   };
 
   const [person, setPerson] = useState(null);
-
-  const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
 
   function handleClick() {
-    setIsChecked(oldIsChecked => !oldIsChecked);
+    setIsChecked(prevIsChecked => !prevIsChecked); // Toggle isChecked state
   }
 
   function checkboxon() {
-    setIsActive(oldIsActive => !oldIsActive);
+    setIsChecked(oldIsChecked => !oldIsChecked);
   }
 
   function generatorRandomNumber() {
@@ -40,6 +38,11 @@ function ConfirmationCheckbox() {
     setButtonPlayed(oldButtonPlayed => !oldButtonPlayed);
     const randomNum = generatorRandomNumber();
     setPerson(wives[randomNum]);
+  };
+
+  const goBack = () => {
+    setIsChecked(false);
+    setButtonPlayed(false);
   };
 
   const wifestyle2 = {
@@ -94,7 +97,7 @@ function ConfirmationCheckbox() {
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
-            disabled={!isActive}
+            disabled={!isChecked}
             style={buttonStyle}
             onClick={handleClick}
             type="button"
@@ -211,6 +214,9 @@ function ConfirmationCheckbox() {
               <TwitterFollowButton screenName={"1Shubham7"} />
             </div>
           </div>
+
+          <button onClick={goBack}>Back</button>
+
         </div>
       )}
     </>
