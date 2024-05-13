@@ -6,6 +6,7 @@ import HowCanYouHelp from "./components/HowCanYouHelp";
 import "./components/My.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import About from "./components/About";
+import wife from "./Images/wife-logo.png"
 
 function App() {
   const refreshAboutPage = () => {
@@ -16,9 +17,15 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{position:"absolute", alignItems:"center",justifyContent:"center",top:"0",left:"0",right:"0",bottom:"0"}}>
+      <img width="300px" src={wife} alt=""/>
+      </div>
+       
       <Router>
         <div className="spacer layer1"></div>
+       
         <nav className="mainnav">
+         
           <ul>
             <a
               href={window.location.pathname === "/about" ? "/" : "#wifeplay"}
