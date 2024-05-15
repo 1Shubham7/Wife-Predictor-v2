@@ -59,8 +59,8 @@ function ConfirmationCheckbox() {
         <div
           id="wifeplay"
           style={{
-            backgroundColor: "green",
-            color: "white",
+            background: "yellow",
+            color: "green",
             fontSize: "20px",
             paddingTop: "120px",
             paddingBottom: "120px",
