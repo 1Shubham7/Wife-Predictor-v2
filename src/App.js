@@ -5,6 +5,7 @@ import Confirm from "./components/Confirm";
 import HowCanYouHelp from "./components/HowCanYouHelp";
 import "./components/My.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Contact from "./components/Contact";
 import About from "./components/About";
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <nav className="mainnav">
           <ul>
             <a
-              href={window.location.pathname === "/about" ? "/" : "#wifeplay"}
+              href={window.location.pathname === "/about" || "/contact" ? "/" : "#wifeplay"}
               style={{ color: "green" }}
             >
               <li
@@ -38,12 +39,22 @@ function App() {
             </a>
 
             <a
+              href="/contact"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <li className="news">Feedback</li>
+            </a>
+
+            <a
               href="https://github.com/1Shubham7"
               target="_blank"
               rel="noreferrer"
             >
               <li className="news">GitHub</li>
             </a>
+
+
             <a
               href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/"
               target="_blank"
@@ -59,6 +70,7 @@ function App() {
 
         <Routes>
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
             path="/"
             element={
