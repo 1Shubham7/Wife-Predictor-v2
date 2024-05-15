@@ -59,7 +59,7 @@ const Contact = () => {
               rows="6"
               autoComplete="off"
               required
-              placeholder="Enter your suggestions, issues here,"
+              placeholder="Enter your suggestions, issues here..."
               style={styles.textarea}>
             </textarea>
 
