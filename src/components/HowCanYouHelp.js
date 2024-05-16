@@ -16,6 +16,7 @@ export default function HowCanYouHelp() {
 
   return (
     <div>
+
       <section style={wifestyle2}>
         <h1 style={{ textDecoration: "underline" }}>How can you help?</h1>
         <p>

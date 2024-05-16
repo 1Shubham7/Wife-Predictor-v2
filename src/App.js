@@ -37,6 +37,7 @@ function App() {
               </li>
             </a>
 
+            
             <a
               href="https://github.com/1Shubham7"
               target="_blank"
@@ -44,6 +45,8 @@ function App() {
             >
               <li className="news">GitHub</li>
             </a>
+
+
             <a
               href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/"
               target="_blank"
@@ -59,6 +62,7 @@ function App() {
 
         <Routes>
           <Route path="/about" element={<About />} />
+          
           <Route
             path="/"
             element={

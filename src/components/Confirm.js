@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./bestbutton.css";
 import wives from '../database/wives';
 import { TwitterShareButton, TwitterFollowButton } from "react-twitter-embed";
+import { Confetti } from "./Confetti";
 
 function ConfirmationCheckbox() {
   const buttonStyle = {
@@ -13,21 +14,16 @@ function ConfirmationCheckbox() {
   };
 
   const [person, setPerson] = useState(null);
-
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
 
   function handleClick() {
-    if (isChecked === false) {
-      setIsChecked(true);
-    } else {
-      setIsChecked(false);
-    }
+    setIsChecked(oldIsChecked => !oldIsChecked);
   }
 
   function checkboxon() {
-    setIsActive(!isActive);
+    setIsActive(oldIsActive => !oldIsActive);
   }
 
   function generatorRandomNumber() {
@@ -41,13 +37,8 @@ function ConfirmationCheckbox() {
   }
 
   const playGame = () => {
-    if (buttonPlayed === true) {
-      setButtonPlayed(false);
-    } else {
-      setButtonPlayed(true);
-    }
+    setButtonPlayed(oldButtonPlayed => !oldButtonPlayed);
     const randomNum = generatorRandomNumber();
-    console.log(randomNum);
     setPerson(wives[randomNum]);
   };
 
@@ -61,7 +52,6 @@ function ConfirmationCheckbox() {
     alignItems: "center",
     padding: "200px 20vw",
     minHeight: "200px",
-    // fontFamily:
   };
 
   return (
@@ -89,7 +79,8 @@ function ConfirmationCheckbox() {
                 type="email"
                 style={{
                   textAlign: "center",
-                  width: "350px",
+                  width: "100%", 
+                  maxWidth: "375px",
                   height: "40px",
                   margin: "0 auto",
                 }}
@@ -146,7 +137,8 @@ function ConfirmationCheckbox() {
             paddingTop: "20px",
           }}
         >
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <Confetti></Confetti>
+          <div style={{ display: "flex", justifyContent:"center"}}>
             <div
               className="card"
               style={{ border: "3px solid #386641", color: "black" }}
@@ -157,7 +149,7 @@ function ConfirmationCheckbox() {
                 alt="Loading"
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "400px",
                   border: "1px solid #386641",
                 }}
               />

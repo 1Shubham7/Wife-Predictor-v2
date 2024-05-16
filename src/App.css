@@ -37,4 +37,28 @@
   }
 }
 
+.mainnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+}
 
+.mainnav ul li {
+  display: inline-block;
+  margin-right: 1 px;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 500px) {
+
+  .mainnav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mainnav ul li {
+    padding: 10px;
+  }
+  
+}
