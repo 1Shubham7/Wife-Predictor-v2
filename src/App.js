@@ -5,7 +5,6 @@ import Confirm from "./components/Confirm";
 import HowCanYouHelp from "./components/HowCanYouHelp";
 import "./components/My.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Contact from "./components/Contact";
 import About from "./components/About";
 
 function App() {
