@@ -22,7 +22,7 @@ function App() {
         <nav className="mainnav">
           <ul>
             <a
-              href={window.location.pathname === "/about" || "/contact" ? "/" : "#wifeplay"}
+              href={window.location.pathname === "/about" ? "/" : "#wifeplay"}
               style={{ color: "green" }}
             >
               <li
@@ -38,14 +38,7 @@ function App() {
               </li>
             </a>
 
-            <a
-              href="/contact"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <li className="news">Feedback</li>
-            </a>
-
+            
             <a
               href="https://github.com/1Shubham7"
               target="_blank"
@@ -70,7 +63,7 @@ function App() {
 
         <Routes>
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          
           <Route
             path="/"
             element={
