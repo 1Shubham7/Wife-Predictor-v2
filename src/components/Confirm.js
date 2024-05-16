@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./bestbutton.css";
 import wives from '../database/wives';
 import { TwitterShareButton, TwitterFollowButton } from "react-twitter-embed";
+import { Confetti } from "./Confetti";
 
 function ConfirmationCheckbox() {
   const buttonStyle = {
@@ -136,7 +137,8 @@ function ConfirmationCheckbox() {
             paddingTop: "20px",
           }}
         >
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <Confetti></Confetti>
+          <div style={{ display: "flex", justifyContent:"center"}}>
             <div
               className="card"
               style={{ border: "3px solid #386641", color: "black" }}
@@ -147,7 +149,7 @@ function ConfirmationCheckbox() {
                 alt="Loading"
                 style={{
                   maxWidth: "100%",
-                  height: "auto",
+                  height: "400px",
                   border: "1px solid #386641",
                 }}
               />
