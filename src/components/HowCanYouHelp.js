@@ -4,7 +4,7 @@ export default function HowCanYouHelp() {
   const wifestyle2 = {
     margin: "0",
     color: "white",
-    background: "green",
+    background: "rgb(248, 122, 143)",
     position: "relative",
     display: "flex",
     flexDirection: "column",
@@ -16,19 +16,18 @@ export default function HowCanYouHelp() {
 
   return (
     <div>
-
       <section style={wifestyle2}>
         <h1 style={{ textDecoration: "underline" }}>How can you help?</h1>
         <p>
           To expand the database, we need more images. I will be more than happy
           to add suggested images to the database. Kindly send me the images or
           their corresponding links to my
-          <a style={{ color: "yellow" }} href="shubhammahar1306@gmail.com">
+          <a style={{ color: "#A7C7E7" }} href="shubhammahar1306@gmail.com">
             email
           </a>{" "}
           or{" "}
           <a
-            style={{ color: "yellow" }}
+            style={{ color: "#A7C7E7" }}
             href="https://www.linkedin.com/in/shubham-singh-mahar-5a002b20b/"
           >
             LinkedIn
