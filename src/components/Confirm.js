@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./bestbutton.css";
-import wives from '../database/wives';
+import wives from "../database/wives";
 import { TwitterShareButton, TwitterFollowButton } from "react-twitter-embed";
 import { Confetti } from "./Confetti";
-import { Bounce, ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ConfirmationCheckbox() {
   const buttonStyle = {
-    backgroundColor: "#132a13",
-    color: "yellowgreen",
+    backgroundColor: "rgb(248, 122, 143)",
+    color: "red",
     border: "3px solid currentcolor",
     boxShadow: "0 0 3px currentcolor",
     borderRadius: "20px",
@@ -20,11 +20,11 @@ function ConfirmationCheckbox() {
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [click,setClick]=useState(false);
+  const [click, setClick] = useState(false);
 
   function handleClick() {
-    if(inputValue===""){
-      toast.error('Enter Your Name!', {
+    if (inputValue === "") {
+      toast.error("Enter Your Name!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -33,22 +33,21 @@ function ConfirmationCheckbox() {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        color:"red",
+        color: "red",
         transition: Bounce,
-        });
-        
-    }else{
-    setIsChecked(oldIsChecked => !oldIsChecked);
+      });
+    } else {
+      setIsChecked((oldIsChecked) => !oldIsChecked);
     }
   }
 
   function checkboxon(e) {
-    if(e.target.checked){
-    setIsActive(oldIsActive => !oldIsActive);
-    setClick(true);
-    }else{
-      setIsActive(oldIsActive => !oldIsActive);
-      toast.error('Please tick checkbox!', {
+    if (e.target.checked) {
+      setIsActive((oldIsActive) => !oldIsActive);
+      setClick(true);
+    } else {
+      setIsActive((oldIsActive) => !oldIsActive);
+      toast.error("Please tick checkbox!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -58,7 +57,7 @@ function ConfirmationCheckbox() {
         progress: undefined,
         theme: "dark",
         transition: Bounce,
-        });
+      });
     }
   }
 
@@ -66,13 +65,12 @@ function ConfirmationCheckbox() {
     return Math.floor(Math.random() * wives.length);
   }
 
-
   function handleInputChange(event) {
     setInputValue(event.target.value);
   }
 
   const playGame = () => {
-    setButtonPlayed(oldButtonPlayed => !oldButtonPlayed);
+    setButtonPlayed((oldButtonPlayed) => !oldButtonPlayed);
     const randomNum = generatorRandomNumber();
     setPerson(wives[randomNum]);
   };
@@ -80,7 +78,7 @@ function ConfirmationCheckbox() {
   const wifestyle2 = {
     margin: "0",
     color: "white",
-    background: "yellow",
+    background: "#A7C7E7",
     position: "relative",
     display: "flex",
     flexDirection: "column",
@@ -95,7 +93,7 @@ function ConfirmationCheckbox() {
         <div
           id="wifeplay"
           style={{
-            backgroundColor: "green",
+            backgroundColor: "rgb(248, 122, 143)",
             color: "white",
             fontSize: "20px",
             paddingTop: "120px",
@@ -114,7 +112,7 @@ function ConfirmationCheckbox() {
                 type="email"
                 style={{
                   textAlign: "center",
-                  width: "100%", 
+                  width: "100%",
                   maxWidth: "375px",
                   height: "40px",
                   margin: "0 auto",
@@ -126,7 +124,13 @@ function ConfirmationCheckbox() {
               />
             </div>
           </div>
-          <input className="mycheckbox" type="checkbox" onChange={(e)=>{checkboxon(e)}} />
+          <input
+            className="mycheckbox"
+            type="checkbox"
+            onChange={(e) => {
+              checkboxon(e);
+            }}
+          />
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
@@ -147,14 +151,15 @@ function ConfirmationCheckbox() {
           <h1 className="ready" style={{ textDecoration: "underline" }}>
             Ready!
           </h1>
-          <p style={{ color: "green" }}>
-            I, {inputValue}, agree to marry the woman who is about to appear as my
-            future wife. Backing away from this promise would mean that I am not a man.
+          <p style={{ color: "rgb(248, 122, 143)" }}>
+            I, {inputValue}, agree to marry the woman who is about to appear as
+            my future wife. Backing away from this promise would mean that I am
+            not a man.
           </p>
           <div
             href="#"
             className="bestbutton"
-            style={{ "--clr": "#6eff3e" }}
+            style={{ "--clr": "pink" }}
             onClick={playGame}
           >
             <span>Who's My Wife</span>
@@ -167,17 +172,17 @@ function ConfirmationCheckbox() {
         <div
           className="wifeShower"
           style={{
-            backgroundColor: "yellow",
+            backgroundColor: "#A7C7E7",
             color: "white",
             paddingBottom: "30px",
             paddingTop: "20px",
           }}
         >
           <Confetti></Confetti>
-          <div style={{ display: "flex", justifyContent:"center"}}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <div
               className="card"
-              style={{ border: "3px solid #386641", color: "black" }}
+              style={{ border: "3px solid red", color: "black" }}
             >
               <img
                 className="card-img-top"
@@ -186,19 +191,21 @@ function ConfirmationCheckbox() {
                 style={{
                   maxWidth: "100%",
                   height: "400px",
-                  border: "1px solid #386641",
+                  border: "1px solid red",
                 }}
               />
               <div
                 className="card-body"
                 style={{
-                  backgroundColor: "#ccff33",
-                  border: "1px solid #386641",
+                  backgroundColor: "pink",
+                  border: "1px solid red",
                 }}
               >
                 <h5
                   className="card-title"
-                  style={{ textDecoration: "underline  green 5px" }}
+                  style={{
+                    textDecoration: "underline  rgb(248, 122, 143) 5px",
+                  }}
                 >
                   {person.name}
                 </h5>
@@ -206,16 +213,16 @@ function ConfirmationCheckbox() {
               <ul
                 className="list-group list-group-flush"
                 style={{
-                  backgroundColor: "#38b000",
-                  border: "1px solid #386641",
+                  backgroundColor: "#FE95D9",
+                  border: "1px solid red",
                 }}
               >
                 <p className="card-text">{person.description}</p>
                 <li
                   className="list-group-item"
                   style={{
-                    backgroundColor: "#ffff3f",
-                    border: "1px solid #386641",
+                    backgroundColor: "pink",
+                    border: "1px solid red",
                   }}
                 >
                   Address: {person.address}
@@ -223,8 +230,8 @@ function ConfirmationCheckbox() {
                 <li
                   className="list-group-item"
                   style={{
-                    backgroundColor: "#2b9348",
-                    border: "1px solid #386641",
+                    backgroundColor: "#FE95D9",
+                    border: "1px solid red",
                   }}
                 >
                   Age: {person.age}
@@ -234,7 +241,12 @@ function ConfirmationCheckbox() {
           </div>
 
           <div className="my-3">
-            <p style={{ color: "green", textDecoration: "underline 3px" }}>
+            <p
+              style={{
+                color: "rgb(248, 122, 143)",
+                textDecoration: "underline 3px",
+              }}
+            >
               <b>Share on Twitter</b>
             </p>
 
