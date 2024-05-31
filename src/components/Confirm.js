@@ -3,8 +3,6 @@ import "./bestbutton.css";
 import wives from '../database/wives';
 import { TwitterShareButton, TwitterFollowButton } from "react-twitter-embed";
 import { Confetti } from "./Confetti";
-import { Bounce, ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 function ConfirmationCheckbox() {
   const buttonStyle = {
@@ -19,53 +17,20 @@ function ConfirmationCheckbox() {
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-  const [click,setClick]=useState(false);
 
   function handleClick() {
-    if(inputValue===""){
-      toast.error('Enter Your Name!', {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        color:"red",
-        transition: Bounce,
-        });
-        
-    }else{
     setIsChecked(oldIsChecked => !oldIsChecked);
-    }
   }
 
-  function checkboxon(e) {
-    if(e.target.checked){
+  function checkboxon() {
     setIsActive(oldIsActive => !oldIsActive);
-    setClick(true);
-    }else{
-      setIsActive(oldIsActive => !oldIsActive);
-      toast.error('Please tick checkbox!', {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Bounce,
-        });
-    }
   }
 
   function generatorRandomNumber() {
     return Math.floor(Math.random() * wives.length);
   }
 
+  const [inputValue, setInputValue] = useState("");
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
@@ -126,7 +91,7 @@ function ConfirmationCheckbox() {
               />
             </div>
           </div>
-          <input className="mycheckbox" type="checkbox" onChange={(e)=>{checkboxon(e)}} />
+          <input className="mycheckbox" type="checkbox" onChange={checkboxon} />
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
@@ -138,7 +103,6 @@ function ConfirmationCheckbox() {
           >
             Wife Me Up
           </button>
-          <ToastContainer />
         </div>
       )}
 
