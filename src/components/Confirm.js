@@ -39,7 +39,6 @@ function ConfirmationCheckbox() {
         color:"red",
         transition: Bounce,
         });
-        
     }
     else if (!click) {
       toast.error("You didn't tick the checkbox!", {
@@ -53,8 +52,7 @@ function ConfirmationCheckbox() {
         theme: "dark",
         transition: Bounce,
       });
-    }
-    else{
+    } else{
     setIsChecked(oldIsChecked => !oldIsChecked);
     }
   }
@@ -151,7 +149,7 @@ function ConfirmationCheckbox() {
                 type="email"
                 style={{
                   textAlign: "center",
-                  width: "100%", 
+                  width: "100%",
                   maxWidth: "375px",
                   height: "40px",
                   margin: "0 auto",
@@ -212,6 +210,7 @@ function ConfirmationCheckbox() {
           }}
         >
           <Confetti></Confetti>
+          <h2 style={{ color: "darkgreen", padding: "10px" }}>{inputValue}, your future wife is</h2>
           <div style={{ display: "flex", justifyContent:"center"}}>
             <div
               className="card"

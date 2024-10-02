@@ -56,9 +56,9 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .mainnav ul li {
     padding: 10px;
   }
-  
+
 }
