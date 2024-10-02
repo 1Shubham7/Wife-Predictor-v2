@@ -12,9 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Debug - Print Github context
-        run: echo "${{ toJson(github) }}"
-
       - name: Thank the contributor
         run: |
           curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
