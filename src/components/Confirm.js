@@ -13,6 +13,7 @@ function ConfirmationCheckbox() {
     border: "3px solid currentcolor",
     boxShadow: "0 0 3px currentcolor",
     borderRadius: "20px",
+    
   };
 
   const [person, setPerson] = useState(null);
@@ -21,10 +22,12 @@ function ConfirmationCheckbox() {
   const [buttonPlayed, setButtonPlayed] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [click,setClick]=useState(false);
-
+  const [name, setName] = useState("");
   function handleClick() {
+   
     if(inputValue===""){
-      toast.error('Enter Your Name!', {
+      
+      toast.error("You didn't enter your name!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -36,19 +39,49 @@ function ConfirmationCheckbox() {
         color:"red",
         transition: Bounce,
         });
-
-    }else{
+    }
+    else if (!click) {
+      toast.error("You didn't tick the checkbox!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
+    } else{
     setIsChecked(oldIsChecked => !oldIsChecked);
     }
   }
 
   function checkboxon(e) {
-    if(e.target.checked){
-    setIsActive(oldIsActive => !oldIsActive);
     setClick(true);
+    if(e.target.checked){
+      if(inputValue===""){
+      
+        toast.error("You didn't enter your name!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          color:"red",
+          transition: Bounce,
+          });
+          
+      }
+    setIsActive(oldIsActive => !oldIsActive);
+    
+   
     }else{
       setIsActive(oldIsActive => !oldIsActive);
-      toast.error('Please tick checkbox!', {
+      toast.error("You did't click the Checkbox", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -61,7 +94,7 @@ function ConfirmationCheckbox() {
         });
     }
   }
-
+ 
   function generatorRandomNumber() {
     return Math.floor(Math.random() * wives.length);
   }
@@ -76,6 +109,8 @@ function ConfirmationCheckbox() {
     const randomNum = generatorRandomNumber();
     setPerson(wives[randomNum]);
   };
+
+
 
   const wifestyle2 = {
     margin: "0",
@@ -102,7 +137,7 @@ function ConfirmationCheckbox() {
             paddingBottom: "120px",
           }}
         >
-          <div className="form-group container">
+          <div className="form-group container" >
             <label htmlFor="exampleInputEmail1">
               <h4>What's your name?</h4>
             </label>
@@ -126,7 +161,7 @@ function ConfirmationCheckbox() {
               />
             </div>
           </div>
-          <input className="mycheckbox" type="checkbox" onChange={(e)=>{checkboxon(e)}} />
+          <input className="mycheckbox" type="checkbox" id="input"  onChange={(e)=>{checkboxon(e)}} />
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
@@ -134,6 +169,7 @@ function ConfirmationCheckbox() {
             style={buttonStyle}
             onClick={handleClick}
             type="button"
+            
             className="btn letsgo btn-success "
           >
             Wife Me Up
