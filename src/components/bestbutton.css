@@ -71,3 +71,19 @@
     width : 20px;
     left: 80%;
 }
+
+.wifeShower h2 {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .wifeShower h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wifeShower h2 {
+        font-size: 1.2rem;
+    }
+}
