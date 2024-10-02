@@ -60,19 +60,19 @@ npm start
 
 Thanks to all our amazing contributors:
 
-- [@1Shubham7](https://github.com/1Shubham7)
-- [@SrNightmare09](https://github.com/SrNightmare09)
-- [@theQuery](https://github.com/theQuery)
-- [@ZenitherPc0](https://github.com/ZenitherPc0)
-- [@Santhosh-Siddhardha](https://github.com/Santhosh-Siddhardha)
-- [@Suvam3456](https://github.com/Suvam3456)
-- [@paulkrishanu4](https://github.com/paulkrishanu4)
-- [@sanmarg](https://github.com/sanmarg)
-- [@aatmajajoshi](https://github.com/aatmajajoshi)
-- [@dhanyashreem2400](https://github.com/dhanyashreem2400)
-- [@dakshsinghrathore](https://github.com/dakshsinghrathore)
-- [@PradnyaGaitonde](https://github.com/PradnyaGaitonde)
-- [@ParthSauguny](https://github.com/ParthSauguny)
+<img src="https://avatars.githubusercontent.com/1Shubham7?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/SrNightmare09?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/theQuery?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/ZenitherPc0?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/Santhosh-Siddhardha?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/Suvam3456?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/paulkrishanu4?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/sanmarg?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/aatmajajoshi?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/dhanyashreem2400?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/dakshsinghrathore?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/PradnyaGaitonde?s=100" width="100" height="100" style="border-radius:50%;"/>
+<img src="https://avatars.githubusercontent.com/ParthSauguny?s=100" width="100" height="100" style="border-radius:50%;"/>
 
 ## Contributing
 If you would like to contribute to this project, please read the [Contribution guidelines](CONTRIBUTING.md) and make sure to follow the [Code Of Conduct](CODE_OF_CONDUCT.md).
