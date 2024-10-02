@@ -24,9 +24,10 @@ function ConfirmationCheckbox() {
   const [click,setClick]=useState(false);
   const [name, setName] = useState("");
   function handleClick() {
+   
     if(inputValue===""){
       
-      toast.error('Enter Your Name!', {
+      toast.error("You You didn't enter your name!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -39,17 +40,31 @@ function ConfirmationCheckbox() {
         transition: Bounce,
         });
         
-    }else{
+    }
+    else if (!click) {
+      toast.error("You didn't click the checkbox!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
+    }
+    else{
     setIsChecked(oldIsChecked => !oldIsChecked);
     }
   }
 
   function checkboxon(e) {
-     
+    setClick(true);
     if(e.target.checked){
       if(inputValue===""){
       
-        toast.error('Enter Your Name!', {
+        toast.error("You didn't enter your name!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -64,11 +79,11 @@ function ConfirmationCheckbox() {
           
       }
     setIsActive(oldIsActive => !oldIsActive);
-    setClick(true);
+    
    
     }else{
       setIsActive(oldIsActive => !oldIsActive);
-      toast.error('Please tick checkbox!', {
+      toast.error("You did't click the Checkbox", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -148,7 +163,7 @@ function ConfirmationCheckbox() {
               />
             </div>
           </div>
-          <input className="mycheckbox" type="checkbox" id="input"  value={inputValue} onChange={(e)=>{checkboxon(e)}} />
+          <input className="mycheckbox" type="checkbox" id="input"  onChange={(e)=>{checkboxon(e)}} />
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
@@ -156,6 +171,7 @@ function ConfirmationCheckbox() {
             style={buttonStyle}
             onClick={handleClick}
             type="button"
+            
             className="btn letsgo btn-success "
           >
             Wife Me Up
