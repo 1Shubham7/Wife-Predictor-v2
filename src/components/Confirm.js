@@ -174,7 +174,7 @@ function ConfirmationCheckbox() {
           }}
         >
           <Confetti></Confetti>
-          <h2 style={{ color: "black", padding: "10px" }}>{inputValue}, your future wife is</h2>
+          <h2 style={{ color: "darkgreen", padding: "10px" }}>{inputValue}, your future wife is</h2>
           <div style={{ display: "flex", justifyContent:"center"}}>
             <div
               className="card"
