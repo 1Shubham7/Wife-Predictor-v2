@@ -27,7 +27,7 @@ function ConfirmationCheckbox() {
    
     if(inputValue===""){
       
-      toast.error("You You didn't enter your name!", {
+      toast.error("You didn't enter your name!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -42,7 +42,7 @@ function ConfirmationCheckbox() {
         
     }
     else if (!click) {
-      toast.error("You didn't click the checkbox!", {
+      toast.error("You didn't tick the checkbox!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
