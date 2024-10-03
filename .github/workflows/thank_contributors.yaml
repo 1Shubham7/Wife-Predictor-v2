@@ -2,7 +2,7 @@ name: Thank Contributors
 
 on:
   pull_request:
-    t/ypes: [closed]
+    types: [closed]
 
 jobs:
   thank_contributor:
