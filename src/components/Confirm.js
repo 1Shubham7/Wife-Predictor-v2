@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./bestbutton.css";
 import wives from '../database/wives';
 import { TwitterShareButton, TwitterFollowButton } from "react-twitter-embed";
@@ -13,7 +13,6 @@ function ConfirmationCheckbox() {
     border: "3px solid currentcolor",
     boxShadow: "0 0 3px currentcolor",
     borderRadius: "20px",
-    
   };
 
   const [person, setPerson] = useState(null);
@@ -21,12 +20,19 @@ function ConfirmationCheckbox() {
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [click,setClick]=useState(false);
-  const [name, setName] = useState("");
+  const [click, setClick] = useState(false);
+  useEffect(() => {
+    const storedName = localStorage.getItem("userName");
+    if (storedName) {
+      setInputValue(storedName);
+    }
+  }, []);
+  const storeInput = (input) => {
+    localStorage.setItem("userName", input);
+  };
+
   function handleClick() {
-   
-    if(inputValue===""){
-      
+    if (inputValue === "") {
       toast.error("You didn't enter your name!", {
         position: "top-right",
         autoClose: 3000,
@@ -36,11 +42,9 @@ function ConfirmationCheckbox() {
         draggable: true,
         progress: undefined,
         theme: "dark",
-        color:"red",
         transition: Bounce,
-        });
-    }
-    else if (!click) {
+      });
+    } else if (!click) {
       toast.error("You didn't tick the checkbox!", {
         position: "top-right",
         autoClose: 3000,
@@ -52,16 +56,15 @@ function ConfirmationCheckbox() {
         theme: "dark",
         transition: Bounce,
       });
-    } else{
-    setIsChecked(oldIsChecked => !oldIsChecked);
+    } else {
+      setIsChecked(oldIsChecked => !oldIsChecked);
     }
   }
 
   function checkboxon(e) {
     setClick(true);
-    if(e.target.checked){
-      if(inputValue===""){
-      
+    if (e.target.checked) {
+      if (inputValue === "") {
         toast.error("You didn't enter your name!", {
           position: "top-right",
           autoClose: 3000,
@@ -71,17 +74,13 @@ function ConfirmationCheckbox() {
           draggable: true,
           progress: undefined,
           theme: "dark",
-          color:"red",
           transition: Bounce,
-          });
-          
+        });
       }
-    setIsActive(oldIsActive => !oldIsActive);
-    
-   
-    }else{
-      setIsActive(oldIsActive => !oldIsActive);
-      toast.error("You did't click the Checkbox", {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+      toast.error("You didn't click the Checkbox", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -91,26 +90,28 @@ function ConfirmationCheckbox() {
         progress: undefined,
         theme: "dark",
         transition: Bounce,
-        });
+      });
     }
   }
- 
+
   function generatorRandomNumber() {
     return Math.floor(Math.random() * wives.length);
   }
-
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
   }
 
   const playGame = () => {
-    setButtonPlayed(oldButtonPlayed => !oldButtonPlayed);
+    setButtonPlayed(true);
     const randomNum = generatorRandomNumber();
     setPerson(wives[randomNum]);
   };
 
-
+  const regenerateResponse = () => {
+    const randomNum = generatorRandomNumber();
+    setPerson(wives[randomNum]);
+  };
 
   const wifestyle2 = {
     margin: "0",
@@ -137,7 +138,7 @@ function ConfirmationCheckbox() {
             paddingBottom: "120px",
           }}
         >
-          <div className="form-group container" >
+          <div className="form-group container">
             <label htmlFor="exampleInputEmail1">
               <h4>What's your name?</h4>
             </label>
@@ -146,7 +147,7 @@ function ConfirmationCheckbox() {
               <input
                 onChange={handleInputChange}
                 value={inputValue}
-                type="email"
+                type="text" 
                 style={{
                   textAlign: "center",
                   width: "100%",
@@ -156,12 +157,11 @@ function ConfirmationCheckbox() {
                 }}
                 className="form-control"
                 id="nameid"
-                aria-describedby="emailHelp"
                 placeholder="Enter Your Name"
               />
             </div>
           </div>
-          <input className="mycheckbox" type="checkbox" id="input"  onChange={(e)=>{checkboxon(e)}} />
+          <input className="mycheckbox" type="checkbox" id="input" onChange={checkboxon} />
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
@@ -169,8 +169,7 @@ function ConfirmationCheckbox() {
             style={buttonStyle}
             onClick={handleClick}
             type="button"
-            
-            className="btn letsgo btn-success "
+            className="btn letsgo btn-success"
           >
             Wife Me Up
           </button>
@@ -184,16 +183,15 @@ function ConfirmationCheckbox() {
             Ready!
           </h1>
           <p style={{ color: "green" }}>
-            I, {inputValue}, agree to marry the woman who is about to appear as my
-            future wife. Backing away from this promise would mean that I am not a man.
+            I, <b>{inputValue}</b>, solemnly pledge to marry the woman revealed as my future wife.
+            To break this vow would be to question my honor and integrity as a man.
           </p>
           <div
-            href="#"
             className="bestbutton"
             style={{ "--clr": "#6eff3e" }}
             onClick={playGame}
           >
-            <span>Who's My Wife</span>
+            <span>Reveal My Wife</span>
             <i></i>
           </div>
         </section>
@@ -209,9 +207,9 @@ function ConfirmationCheckbox() {
             paddingTop: "20px",
           }}
         >
-          <Confetti></Confetti>
-          <h2 style={{ color: "darkgreen", padding: "10px" }}>{inputValue}, your future wife is</h2>
-          <div style={{ display: "flex", justifyContent:"center"}}>
+          <Confetti />
+          <h2 style={{ color: "darkgreen", padding: "10px" }}><b>{inputValue}</b>,your life’s greatest chapter is </h2>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <div
               className="card"
               style={{ border: "3px solid #386641", color: "black" }}
@@ -231,11 +229,12 @@ function ConfirmationCheckbox() {
                 style={{
                   backgroundColor: "#ccff33",
                   border: "1px solid #386641",
+                  borderRadius: "5px"
                 }}
               >
                 <h5
                   className="card-title"
-                  style={{ textDecoration: "underline  green 5px" }}
+                  style={{ textDecoration: "underline green 5px" }}
                 >
                   {person.name}
                 </h5>
@@ -270,6 +269,21 @@ function ConfirmationCheckbox() {
             </div>
           </div>
 
+          <button
+            style={{
+              padding: "10px 20px",
+              backgroundColor: "#132a13",
+              color: "yellowgreen",
+              border: "3px solid currentcolor",
+              borderRadius: "20px",
+              cursor: "pointer",
+              marginTop: "20px",
+              transition: "background-color 0.3s ease"
+            }}
+            onClick={regenerateResponse}
+          >
+            Regenerate Response
+          </button>
           <div className="my-3">
             <p style={{ color: "green", textDecoration: "underline 3px" }}>
               <b>Share on Twitter</b>
