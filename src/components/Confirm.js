@@ -108,7 +108,6 @@ function ConfirmationCheckbox() {
     setPerson(wives[randomNum]);
   };
 
-
   const regenerateResponse = () => {
       setPerson(null);
       setInputValue("");
