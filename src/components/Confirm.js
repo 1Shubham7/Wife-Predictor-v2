@@ -5,8 +5,10 @@ import { TwitterShareButton, TwitterFollowButton } from "react-twitter-embed";
 import { Confetti } from "./Confetti";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 function ConfirmationCheckbox() {
+
   const buttonStyle = {
     backgroundColor: "#132a13",
     color: "yellowgreen",
@@ -15,12 +17,14 @@ function ConfirmationCheckbox() {
     borderRadius: "20px",
   };
 
+
   const [person, setPerson] = useState(null);
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [click, setClick] = useState(false);
+
   useEffect(() => {
     const storedName = localStorage.getItem("userName");
     if (storedName) {
@@ -33,14 +37,10 @@ function ConfirmationCheckbox() {
 
   function handleClick() {
     if (inputValue === "") {
+
       toast.error("You didn't enter your name!", {
         position: "top-right",
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "dark",
         transition: Bounce,
       });
@@ -48,20 +48,18 @@ function ConfirmationCheckbox() {
       toast.error("You didn't tick the checkbox!", {
         position: "top-right",
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "dark",
         transition: Bounce,
       });
     } else {
+
       setIsChecked(oldIsChecked => !oldIsChecked);
+
     }
   }
 
   function checkboxon(e) {
+
     setClick(true);
     if (e.target.checked) {
       if (inputValue === "") {
@@ -92,6 +90,7 @@ function ConfirmationCheckbox() {
         transition: Bounce,
       });
     }
+
   }
 
   function generatorRandomNumber() {
@@ -108,9 +107,11 @@ function ConfirmationCheckbox() {
     setPerson(wives[randomNum]);
   };
 
+
   const regenerateResponse = () => {
     const randomNum = generatorRandomNumber();
     setPerson(wives[randomNum]);
+
   };
 
   const wifestyle2 = {
@@ -161,7 +162,9 @@ function ConfirmationCheckbox() {
               />
             </div>
           </div>
+
           <input className="mycheckbox" type="checkbox" id="input" onChange={checkboxon} />
+
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
@@ -169,7 +172,9 @@ function ConfirmationCheckbox() {
             style={buttonStyle}
             onClick={handleClick}
             type="button"
+
             className="btn letsgo btn-success"
+
           >
             Wife Me Up
           </button>
@@ -183,8 +188,10 @@ function ConfirmationCheckbox() {
             Ready!
           </h1>
           <p style={{ color: "green" }}>
+
             I, <b>{inputValue}</b>, solemnly pledge to marry the woman revealed as my future wife.
             To break this vow would be to question my honor and integrity as a man.
+
           </p>
           <div
             className="bestbutton"
@@ -208,7 +215,9 @@ function ConfirmationCheckbox() {
           }}
         >
           <Confetti />
+
           <h2 style={{ color: "darkgreen", padding: "10px" }}><b>{inputValue}</b>,your life’s greatest chapter is </h2>
+
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div
               className="card"
@@ -300,6 +309,20 @@ function ConfirmationCheckbox() {
               <TwitterFollowButton screenName={"1Shubham7"} />
             </div>
           </div>
+
+          <button
+            onClick={playAgain}
+            style={{
+              backgroundColor: "white",
+              color: "green",
+              border: "3px solid #386641",
+              boxShadow: "0 0 3px green",
+              borderRadius: "20px",
+              padding: "10px 20px",
+            }}
+          >
+            Play Again
+          </button>
         </div>
       )}
     </>

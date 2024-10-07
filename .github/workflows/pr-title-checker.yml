@@ -1,0 +1,25 @@
+name: PR Title Checker
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  title-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Validate PR Title
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          echo "Checking PR Title: $PR_TITLE"
+          if [[ ! "$PR_TITLE" =~ ^(Feat|Fix|Chore|Docs):\ .+ ]]; then
+            echo "❌ Invalid PR Title: '$PR_TITLE'"
+            echo "PR titles must follow the format: 'Feat: Description', 'Fix: Description', 'Chore: Description', or 'Docs: Description'"
+            exit 1
+          else
+            echo "✅ PR Title is valid: '$PR_TITLE'"
+          fi
