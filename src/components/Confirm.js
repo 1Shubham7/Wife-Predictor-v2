@@ -99,6 +99,7 @@ function ConfirmationCheckbox() {
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
+    storeInput(event.target.value);
   }
 
   const playGame = () => {
@@ -109,14 +110,14 @@ function ConfirmationCheckbox() {
 
 
   const regenerateResponse = () => {
-    setPerson(null);
-    setInputValue("");
-    setClick(false);
-    setIsChecked(false);
-    setIsActive(false);
-    setButtonPlayed(false);
-    localStorage.removeItem("userName"); 
-  };
+      setPerson(null);
+      setInputValue("");
+      setClick(false);
+      setIsChecked(false);
+      setIsActive(false);
+      setButtonPlayed(false);
+      localStorage.removeItem("userName");
+    };
 
   const wifestyle2 = {
     margin: "0",
