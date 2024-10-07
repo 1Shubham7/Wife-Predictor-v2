@@ -109,9 +109,13 @@ function ConfirmationCheckbox() {
 
 
   const regenerateResponse = () => {
-    const randomNum = generatorRandomNumber();
-    setPerson(wives[randomNum]);
-
+    setPerson(null);
+    setInputValue("");
+    setClick(false);
+    setIsChecked(false);
+    setIsActive(false);
+    setButtonPlayed(false);
+    localStorage.removeItem("userName"); 
   };
 
   const wifestyle2 = {
