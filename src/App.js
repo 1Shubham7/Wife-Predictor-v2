@@ -14,6 +14,15 @@ function App() {
     }, 50);
   };
 
+  const handleLoginRedirect = () => {
+    window.location.href = "/login.html"; // Redirects to login.html in the public directory
+  };
+
+  // Function to redirect to signup.html
+  const handleSignupRedirect = () => {
+    window.location.href = "/signup.html"; // Redirects to signup.html in the public directory
+  };
+
   return (
     <div className="App">
       <Router>
@@ -57,6 +66,8 @@ function App() {
             <Link to="/about" onClick={refreshAboutPage}>
               <li className="news">About</li>
             </Link>
+            <li className="news" onClick={handleLoginRedirect}>Login</li>
+            <li className="news" onClick={handleSignupRedirect}>Sign Up</li> 
           </ul>
         </nav>
 

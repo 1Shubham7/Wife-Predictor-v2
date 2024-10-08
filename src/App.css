@@ -42,12 +42,18 @@
   margin: 0;
   padding: 0;
   overflow: visible;
+  display: flex; /* Make sure items are aligned horizontally */
+  justify-content: space-evenly;
+  
 }
 
 .mainnav ul li {
   display: inline-block;
   margin-right: 1 px;
   font-size: 1em;
+  margin-right: 10px; /* Correct the px margin */
+  padding: 10px 15px; /* Add consistent padding for better spacing */
+  cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
@@ -59,6 +65,8 @@
 
   .mainnav ul li {
     padding: 10px;
+    margin: 5px 0;
   }
+
 
 }
