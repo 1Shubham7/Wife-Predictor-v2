@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
 function ConfirmationCheckbox() {
-
+  const navigate = useNavigate(); 
   const buttonStyle = {
     backgroundColor: "#132a13",
     color: "yellowgreen",
@@ -51,7 +51,7 @@ function ConfirmationCheckbox() {
         transition: Bounce,
       });
     } else {
-      setIsChecked(oldIsChecked => !oldIsChecked);
+      setIsChecked(true);
     }
   }
 
@@ -62,11 +62,6 @@ function ConfirmationCheckbox() {
         toast.error("You didn't enter your name!", {
           position: "top-right",
           autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
           theme: "dark",
           transition: Bounce,
         });
@@ -77,11 +72,6 @@ function ConfirmationCheckbox() {
       toast.error("You didn't click the Checkbox", {
         position: "top-right",
         autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
         theme: "dark",
         transition: Bounce,
       });
@@ -101,6 +91,13 @@ function ConfirmationCheckbox() {
     setButtonPlayed(true);
     const randomNum = generatorRandomNumber();
     setPerson(wives[randomNum]);
+  };
+
+  const playAgain = () => {
+    setButtonPlayed(false); 
+    setIsChecked(false); 
+    setClick(false); 
+    navigate("/");
   };
 
   const wifestyle2 = {
@@ -277,6 +274,20 @@ function ConfirmationCheckbox() {
               <TwitterFollowButton screenName={"1Shubham7"} />
             </div>
           </div>
+
+          <button
+            onClick={playAgain}
+            style={{
+              backgroundColor: "white",
+              color: "green",
+              border: "3px solid #386641",
+              boxShadow: "0 0 3px green",
+              borderRadius: "20px",
+              padding: "10px 20px",
+            }}
+          >
+            Play Again
+          </button>
         </div>
       )}
     </>
