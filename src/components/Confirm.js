@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./bestbutton.css";
 import wives from '../database/wives';
 import { TwitterShareButton, TwitterFollowButton } from "react-twitter-embed";
@@ -8,27 +8,35 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
 function ConfirmationCheckbox() {
+  const navigate = useNavigate(); 
+  const buttonStyle = {
+    backgroundColor: "#132a13",
+    color: "yellowgreen",
+    border: "3px solid currentcolor",
+    boxShadow: "0 0 3px currentcolor",
+    borderRadius: "20px",
+  };
+
   const [person, setPerson] = useState(null);
   const [isActive, setIsActive] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [buttonPlayed, setButtonPlayed] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [click, setClick] = useState(false);
-  const navigate = useNavigate(); // for navigation
 
-  // Define the buttonStyle after isActive is initialized
-  const buttonStyle = {
-    backgroundColor: isActive ? "#132a13" : "transparent", // Transparent when not active
-    color: isActive ? "yellowgreen" : "grey",
-    border: "3px solid currentcolor",
-    boxShadow: isActive ? "0 0 3px currentcolor" : "none", // No shadow when not active
-    borderRadius: "20px",
-    cursor: isActive ? "pointer" : "not-allowed",
-    transition: "background-color 0.3s ease, color 0.3s ease", // Smooth transition
+  useEffect(() => {
+    const storedName = localStorage.getItem("userName");
+    if (storedName) {
+      setInputValue(storedName);
+    }
+  }, []);
+
+  const storeInput = (input) => {
+    localStorage.setItem("userName", input);
   };
 
   function handleClick() {
-    if(inputValue === "") {
+    if (inputValue === "") {
       toast.error("You didn't enter your name!", {
         position: "top-right",
         autoClose: 3000,
@@ -43,13 +51,31 @@ function ConfirmationCheckbox() {
         transition: Bounce,
       });
     } else {
-      setIsChecked(true); // Move to the next step
+      setIsChecked(true);
     }
   }
 
   function checkboxon(e) {
-    setClick(e.target.checked);
-    setIsActive(e.target.checked); // Button will be enabled only if checkbox is checked
+    setClick(true);
+    if (e.target.checked) {
+      if (inputValue === "") {
+        toast.error("You didn't enter your name!", {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "dark",
+          transition: Bounce,
+        });
+      }
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+      toast.error("You didn't click the Checkbox", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "dark",
+        transition: Bounce,
+      });
+    }
   }
 
   function generatorRandomNumber() {
@@ -58,6 +84,7 @@ function ConfirmationCheckbox() {
 
   function handleInputChange(event) {
     setInputValue(event.target.value);
+    storeInput(event.target.value);
   }
 
   const playGame = () => {
@@ -67,10 +94,10 @@ function ConfirmationCheckbox() {
   };
 
   const playAgain = () => {
-    setButtonPlayed(false); // Reset the game state
-    setIsChecked(false); // Reset the checkbox state
-    setClick(false); // Uncheck the checkbox
-    navigate("/"); // Navigate back to the main page
+    setButtonPlayed(false); 
+    setIsChecked(false); 
+    setClick(false); 
+    navigate("/");
   };
 
   const wifestyle2 = {
@@ -107,7 +134,7 @@ function ConfirmationCheckbox() {
               <input
                 onChange={handleInputChange}
                 value={inputValue}
-                type="email"
+                type="text"
                 style={{
                   textAlign: "center",
                   width: "100%",
@@ -121,20 +148,16 @@ function ConfirmationCheckbox() {
               />
             </div>
           </div>
-          <input
-            className="mycheckbox"
-            type="checkbox"
-            id="input"
-            onChange={(e) => checkboxon(e)}
-          />
+
+          <input className="mycheckbox" type="checkbox" id="input" onChange={checkboxon} />
           &nbsp; Whichever wife I get, I will accept for the rest of my life.
           <p></p>
           <button
-            disabled={!isActive} // Disable if checkbox isn't checked
+            disabled={!isActive}
             style={buttonStyle}
             onClick={handleClick}
             type="button"
-            className="btn letsgo btn-success "
+            className="btn letsgo btn-success"
           >
             Wife Me Up
           </button>
@@ -148,16 +171,15 @@ function ConfirmationCheckbox() {
             Ready!
           </h1>
           <p style={{ color: "green" }}>
-            I, {inputValue}, agree to marry the woman who is about to appear as
-            my future wife. Backing away from this promise would mean that I am
-            not a man.
+            I, <b>{inputValue}</b>, solemnly pledge to marry the woman revealed as my future wife.
+            To break this vow would be to question my honor and integrity as a man.
           </p>
           <div
             className="bestbutton"
             style={{ "--clr": "#6eff3e" }}
             onClick={playGame}
           >
-            <span>Who's My Wife</span>
+            <span>Reveal My Wife</span>
             <i></i>
           </div>
         </section>
@@ -175,7 +197,7 @@ function ConfirmationCheckbox() {
         >
           <Confetti />
           <h2 style={{ color: "darkgreen", padding: "10px" }}>
-            {inputValue}, your future wife is
+            <b>{inputValue}</b>, your life’s greatest chapter is
           </h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div
@@ -197,11 +219,12 @@ function ConfirmationCheckbox() {
                 style={{
                   backgroundColor: "#ccff33",
                   border: "1px solid #386641",
+                  borderRadius: "5px"
                 }}
               >
                 <h5
                   className="card-title"
-                  style={{ textDecoration: "underline  green 5px" }}
+                  style={{ textDecoration: "underline green 5px" }}
                 >
                   {person.name}
                 </h5>
@@ -240,7 +263,6 @@ function ConfirmationCheckbox() {
             <p style={{ color: "green", textDecoration: "underline 3px" }}>
               <b>Share on Twitter</b>
             </p>
-
             <div className="mid-col-6">
               <TwitterShareButton
                 url={"wife-predictor.netlify.app"}
