@@ -204,6 +204,42 @@ html {
   }
 }
 
+
+}
+.news-container {
+  display: flex;
+  justify-content: center; /* Centers the .news horizontally */
+  align-items: center; /* Centers the .news vertically if needed */
+  margin-top: 20px; /* Adjust as necessary for spacing */
+}
+
+.news {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  text-align: center; /* Aligns the text inside the .news element */
+  transition: transform 0.4s ease;
+}
+
+.news:hover {
+  transform: scale(1.2);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.news::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 0;
+  background: green;
+  transition: width 0.5s;
+}
+
+.news:hover::after {
+  width: 100%;
+  transition: width 0.4s ease;
+}
+
 @media (max-width: 768px) {
   .letsgo:hover {
     transform: scale(1.1);
@@ -239,3 +275,4 @@ html {
     transform: scale(1);
   }
 }
+
